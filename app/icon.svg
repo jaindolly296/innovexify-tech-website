@@ -1,0 +1,69 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  fill="none"
+>
+  <defs>
+    <linearGradient
+      id="brand"
+      x1="70"
+      y1="60"
+      x2="430"
+      y2="450"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0" stop-color="#06B6D4"/>
+      <stop offset="0.5" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark favicon background -->
+  <rect
+    width="512"
+    height="512"
+    rx="120"
+    fill="#050507"
+  />
+
+  <!-- Main technology mark -->
+  <path
+    d="M145 105H205V355H145V105Z"
+    fill="url(#brand)"
+  />
+
+  <!-- Secondary vertical mark -->
+  <path
+    d="M225 175H285V395H225V175Z"
+    fill="url(#brand)"
+  />
+
+  <!-- Orbit -->
+  <path
+    d="M105 330
+       C145 420 300 445 390 350
+       C455 280 410 185 330 155
+       C235 120 135 155 95 225"
+    stroke="url(#brand)"
+    stroke-width="30"
+    stroke-linecap="round"
+    fill="none"
+  />
+
+  <!-- Innovation diagonal -->
+  <path
+    d="M230 165L335 270"
+    stroke="url(#brand)"
+    stroke-width="30"
+    stroke-linecap="round"
+  />
+
+  <!-- Technology node -->
+  <circle
+    cx="365"
+    cy="105"
+    r="25"
+    fill="#06B6D4"
+  />
+
+</svg>

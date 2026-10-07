@@ -1,0 +1,169 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="620"
+  height="150"
+  viewBox="0 0 620 150"
+  fill="none"
+>
+  <defs>
+
+    <!-- Main Brand Gradient -->
+    <linearGradient
+      id="brandGradient"
+      x1="20"
+      y1="20"
+      x2="150"
+      y2="130"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0" stop-color="#06B6D4"/>
+      <stop offset="0.5" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+
+    <!-- X Gradient -->
+    <linearGradient
+      id="xGradient"
+      x1="350"
+      y1="40"
+      x2="430"
+      y2="110"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0" stop-color="#06B6D4"/>
+      <stop offset="0.5" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+
+  </defs>
+
+
+  <!-- =================================
+       INNOVEXIFY ICON
+  ================================== -->
+
+  <g transform="translate(10 10)">
+
+    <!-- Main vertical technology mark -->
+    <path
+      d="M25 25H52V105H25V25Z"
+      fill="url(#brandGradient)"
+    />
+
+    <!-- Secondary vertical mark -->
+    <path
+      d="M62 48H89V125H62V48Z"
+      fill="url(#brandGradient)"
+    />
+
+    <!-- Orbit -->
+    <path
+      d="M12 98
+         C32 132 87 140 123 111
+         C151 89 144 57 116 45
+         C83 31 43 43 22 68"
+      stroke="url(#brandGradient)"
+      stroke-width="10"
+      stroke-linecap="round"
+      fill="none"
+    />
+
+    <!-- Innovation diagonal -->
+    <path
+      d="M65 45L105 85"
+      stroke="url(#brandGradient)"
+      stroke-width="10"
+      stroke-linecap="round"
+    />
+
+    <!-- Technology node -->
+    <circle
+      cx="120"
+      cy="28"
+      r="8"
+      fill="#06B6D4"
+    />
+
+  </g>
+
+
+  <!-- =================================
+       COMPANY NAME
+  ================================== -->
+
+  <text
+    x="170"
+    y="75"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="47"
+    font-weight="800"
+    letter-spacing="-2"
+    fill="#FFFFFF"
+  >
+    INNOVE
+  </text>
+
+
+  <!-- X -->
+  <text
+    x="360"
+    y="75"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="47"
+    font-weight="800"
+    letter-spacing="-2"
+    fill="url(#xGradient)"
+  >
+    X
+  </text>
+
+
+  <!-- IFY -->
+  <text
+    x="398"
+    y="75"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="47"
+    font-weight="800"
+    letter-spacing="-2"
+    fill="#FFFFFF"
+  >
+    IFY
+  </text>
+
+
+  <!-- =================================
+       TECH LABEL
+  ================================== -->
+
+  <line
+    x1="174"
+    y1="95"
+    x2="260"
+    y2="95"
+    stroke="#06B6D4"
+    stroke-width="2"
+  />
+
+  <text
+    x="278"
+    y="105"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="20"
+    font-weight="700"
+    letter-spacing="8"
+    fill="#FFFFFF"
+  >
+    TECH
+  </text>
+
+  <line
+    x1="385"
+    y1="95"
+    x2="470"
+    y2="95"
+    stroke="#8B5CF6"
+    stroke-width="2"
+  />
+
+</svg>
