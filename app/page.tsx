@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 6391)
-Total output lines: 350
-
 "use client";
 
 import { FormEvent, useState } from "react";
@@ -140,7 +137,79 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hidd…1391 tokens truncated…review[activeService].details.map((item) => <div key={item} className="rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-xs font-medium text-slate-700"><span className="mr-1 text-blue-600">✓</span>{item}</div>)}
+          <div className="hidden sm:block">
+            <div className="rounded-2xl border border-slate-200 bg-white p-2.5 shadow-[0_16px_50px_rgba(15,23,42,0.09)]">
+              <div className="rounded-xl bg-[#07172B] p-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-[8px] uppercase tracking-[0.16em] text-blue-300">Connected Business System</div>
+                    <div className="mt-1 text-base font-semibold text-white">From data to action</div>
+                  </div>
+                  <span className="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[7px] font-semibold text-blue-200">ACTIVE</span>
+                </div>
+                <div className="mt-4 grid grid-cols-3 gap-2">
+                  {[['INPUT','Business Data'],['INTELLIGENCE','AI + Analytics'],['OUTPUT','Business Action']].map(([a,b]) => (
+                    <div key={a} className="rounded-lg border border-white/10 bg-white/5 p-2.5">
+                      <div className="text-[7px] uppercase tracking-[0.1em] text-white/40">{a}</div>
+                      <div className="mt-2 text-xs font-semibold text-white">{b}</div>
+                      <div className="mt-2 h-1 rounded-full bg-white/10"><div className="h-full w-3/4 rounded-full bg-blue-400" /></div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-3 flex h-20 items-end gap-1 rounded-lg border border-white/10 bg-white/[0.04] p-3">
+                  {[30,42,35,55,48,63,57,72,65,78].map((height, index) => <div key={index} className="flex-1 rounded-t-sm bg-blue-400/70" style={{height}} />)}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" className="border-b border-slate-200 bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
+          <div className="mb-5">
+            <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-blue-600">Capabilities / 07</div>
+            <h2 className="mt-1 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">What we build <span className="text-slate-400">for growth.</span></h2>
+            <p className="mt-1 max-w-xl text-sm leading-6 text-slate-500">Choose a capability to see what Innovexify can deliver.</p>
+          </div>
+
+          {/* Mobile: compact cards. Detailed preview is intentionally hidden to reduce scrolling. */}
+          <div className="grid grid-cols-2 gap-2 sm:hidden">
+            {services.map((service) => (
+              <Link key={service.title} href={service.href} className="rounded-xl border border-slate-200 bg-white p-3 hover:border-blue-200 hover:bg-blue-50">
+                <div className="text-[9px] font-semibold uppercase tracking-[0.12em] text-blue-600">{service.tag}</div>
+                <div className="mt-1 text-sm font-semibold text-[#0B1F3A]">{service.title}</div>
+                <div className="mt-1 text-xs leading-5 text-slate-500">{service.text}</div>
+              </Link>
+            ))}
+          </div>
+
+          {/* Desktop/tablet: keep the interactive service experience. */}
+          <div className="hidden gap-4 sm:grid lg:grid-cols-[360px_1fr]">
+            <div className="space-y-1.5">
+              {services.map((service, index) => (
+                <button key={service.title} type="button" onMouseEnter={() => setActiveService(index)} onFocus={() => setActiveService(index)} onClick={() => setActiveService(index)} className={`group flex w-full items-center gap-3 rounded-lg border p-2.5 text-left transition ${activeService === index ? "border-blue-200 bg-blue-50" : "border-slate-200 bg-white hover:border-blue-200 hover:bg-slate-50"}`}>
+                  <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-md text-[9px] font-bold ${activeService === index ? "bg-blue-600 text-white" : "bg-slate-100 text-blue-600"}`}>{service.no}</span>
+                  <span className="min-w-0 flex-1">
+                    <span className={`block text-[9px] font-semibold uppercase tracking-[0.12em] ${activeService === index ? "text-blue-600" : "text-slate-400"}`}>{service.tag}</span>
+                    <span className="block text-sm font-semibold text-[#0B1F3A]">{service.title}</span>
+                  </span>
+                  <span className="text-sm text-blue-600">→</span>
+                </button>
+              ))}
+            </div>
+            <div className="min-h-[390px] rounded-xl border border-slate-200 bg-[#F5F8FC] p-5">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <div className="text-[10px] font-semibold uppercase tracking-[0.15em] text-blue-600">{services[activeService].tag} / {servicePreview[activeService].kicker}</div>
+                  <h3 className="mt-1 text-2xl font-semibold tracking-[-0.03em]">{services[activeService].title}</h3>
+                  <p className="mt-2 max-w-xl text-sm leading-6 text-slate-500">{servicePreview[activeService].subtitle}</p>
+                </div>
+                <span className="hidden rounded-md border border-slate-200 bg-white px-2.5 py-1.5 text-[9px] font-semibold uppercase tracking-[0.12em] text-blue-600 md:block">{servicePreview[activeService].metric}</span>
+              </div>
+              <div className="mt-5 grid grid-cols-2 gap-2">
+                {servicePreview[activeService].details.map((item) => <div key={item} className="rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-xs font-medium text-slate-700"><span className="mr-1 text-blue-600">✓</span>{item}</div>)}
               </div>
               <div className="mt-4 rounded-lg bg-[#0B1F3A] px-4 py-3.5">
                 <div className="text-[9px] font-semibold uppercase tracking-[0.15em] text-blue-300">Business outcome</div>
